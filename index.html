@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Adena</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(135deg,#b50075,#f577ba);color:white}
+
+.container{max-width:1200px;margin:auto;padding:20px}
+
+/* NAVBAR */
+nav{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:20px;
+}
+nav h1{color:#3f002c}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{
+	text-decoration:none;
+	color:white;
+	font-size:14px;
+	display:block;
+	padding:8px 12px;
+	border-radius:8px;
+	cursor:pointer;
+	transition:background .18s,transform .08s;
+}
+nav a:hover, nav a:focus{
+	background:rgba(255,255,255,0.08);
+	transform:translateY(-2px);
+	outline:none;
+}
+
+/* HERO */
+.hero{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ align-items:center;
+ gap:30px;
+ margin-top:40px;
+}
+.hero img{
+ width:200px;
+ height:200px;
+ max-width:240px;
+ border-radius:50%;
+ object-fit:cover;
+}
+.hero-text h2{
+ font-size:40px;
+}
+.hero-text span{color:#2a0113}
+.hero-text p{margin:10px 0;opacity:0.8}
+.btn{
+ padding:10px 20px;
+ background:#7d0e3e;
+ border:none;
+ border-radius:20px;
+ cursor:pointer;
+}
+
+/* SECTION */
+section{margin:60px 0}
+h2{margin-bottom:20px}
+
+/* CARD */
+.card{
+ background:rgba(255,255,255,0.05);
+ backdrop-filter:blur(10px);
+ padding:20px;
+ border-radius:15px;
+ transition:0.3s;
+}
+.card:hover{transform:scale(1.05)}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+}
+
+/* CONTACT */
+.contact a{
+ display:block;
+ margin:8px 0;
+ color:#2c021c;
+ text-decoration:none;
+}
+
+/* FORM */
+input,textarea{
+ width:100%;
+ padding:10px;
+ margin-top:10px;
+ border:none;
+ border-radius:10px;
+}
+button{margin-top:10px;width:100%;padding:10px;border:none;border-radius:10px;background:#38bdf8;color:white}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+ .hero{grid-template-columns:1fr;text-align:center}
+ .hero img{margin:auto}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+<h1>Adena</h1>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-text">
+<h2>Hi, I'm <span>Adena Raisa Ufaira Azra</span></h2>
+<p>SISWA | X PPLG  1</p>
+<button class="btn">Explore</button>
+</div>
+<img src="adena.jpeg" id="profileImg"> 
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>Saya Adena Raisa Ufairah Azra, saat ini saya menduduki kelas 10 di SMK N 1 Bawang dan mengamput jurusan pengembangan perangkat lunak dan gim, saya memiliki kemampuan komunikasi yang baik serta mampu keberjasama dalam tim</p>
+</div>
+</section>
+
+<section id="Pendidikan">
+<h2>Pendidikan</h2>
+<div class="card">
+<h3>Riwayat Pendidikan</h3><br>
+<p>TK : TK PGRI Pagedongan</p>
+<p>SD : SD Negeri 1 Kebutuhduwur</p>
+<P>SMP : SMP Negeri 1 Pagedonggan</P>
+<p>SMK : SMK Negeri 1 Bawang</p><br></br>
+<h3>Pengalaman Organisasi</h3><br>
+<p>waktu smp saya berpengalaman dalam organisasi pramuka yang membentuk kemampuan, kedisplinan dan kepemimpinan kebetulan saya dipercayai untuk menjadi pemimpin regu dari itu saya tau apa itu tanggung jawab memimpin tim, mengatur strategi kegiatan, serta meningkatkan kedisplinan</p>
+<P>SMP : Kepramukaan,OSIS </P>
+<p>SMK : Ekskul Tari </p><br>
+<h3>Prestasi</h3><br>
+<p>SMP : Petanque</p>
+<p>SMK : Petanque</p>
+</div>
+</section>
+
+<section id="Kemampuan">
+<h2>Kemampuan</h2>
+<div class="card">
+<p>Hardskill : saya menguasai olahraga khususnya cabang petanque dengan kemampuan akurasi dan strategi yang baik, serta terbiasa berlatih secara disiplin.
+dan saya juga memiliki keterampilan dalam seni tari yang mencerminkan kreativitas, koordinasi tubuh, dan kemampuan tampil di depan publik.</p><br>
+<p>Softskill : saya memiliki kemampuan mengedit foto maupun vidio dengan hasil yang rapi, menarik, sesuai keinginan dan kreatif</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<div class="card">
+<a href="https://maps.app.goo.gl/gZ51TfHxFJqPdXPY8" target="_blank">📍 Lokasi</a>
+<a href="tel:0882-2645-0196">📞 Telepon</a>
+<a href="mailto:adenaraisha133@gmail.com">📧 Email</a>
+<a href="https://www.instagram.com/saadnaa_12?igsh=cHI3a2h5bGNud2Jm" target="_blank">📱 Instagram</a>
+<a href="https://github.com/20348-creater" target="_blank">💻 GitHub</a>
+</div>
+
+<script>
+function kirim(e){
+ e.preventDefault();
+ alert('Pesan terkirim!');
+}
+</script>
+
+</body>
+</html>
