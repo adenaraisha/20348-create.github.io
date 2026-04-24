@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #ebafaf, #a04caf);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .login-box {
+            width: 350px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #a04caf;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #a04caf;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+
+    <script>
+function cekLogin(event) {
+    event.preventDefault();
+
+    var user = document.getElementById("username").value.trim();
+    var pass = document.getElementById("password").value.trim();
+    var msg  = document.getElementById("pesan");
+
+    if (user === "adena" && pass === "12345") {
+        msg.className = "message success";
+        msg.style.display = "block";
+        msg.innerHTML = "Login berhasil";
+    } else {
+        msg.className = "message error";
+        msg.style.display = "block";
+        msg.innerHTML = "Login gagal";
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Form Login</h2>
+
+    <form onsubmit="cekLogin(event)">
+        <input type="text" id="username" placeholder="Masukkan Username" required>
+        <input type="password" id="password" placeholder="Masukkan Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="pesan" class="message"></div>
+</div>
+
+</body>
+</html>
